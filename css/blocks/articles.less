@@ -1,0 +1,93 @@
+// main: ../style.less
+
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.articles__col{
+    width: 25%;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+
+    @media @notebook{ 
+        width: 50%;
+        padding: 0 5rem;
+    }
+
+    @media @tablet{ 
+        width: 50%;
+        padding: 0 1rem;
+    }
+    @media @mobile-sm{
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+.articles__header{
+    position: relative;
+    margin-bottom: 1.35rem;
+}
+
+.articles__content{
+    margin-bottom: 2rem;
+}
+
+.articles__time{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 77px;
+    height: 77px;
+    background-color: @black;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: @white;
+    font-size: 1.06rem;
+    line-height: 1.4;
+}
+
+.articles__photo{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 370px;
+    height: 257px;
+}
+
+.articles__title{
+    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+    color: @black;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    a{
+        color: inherit;
+        text-decoration: none;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.articles__cat{
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    color: @black;
+    text-transform: uppercase;
+}
+
+.articles__text{
+    font-size: 0.8rem;
+    color: @gray;
+    font-weight: 300;
+    line-height: 2;
+}
